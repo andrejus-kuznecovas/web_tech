@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<discography>
+    <library genre="rock">
+        <playlist subgenre="punk">
+            <name>"Punk rock powerhouse"</name>
+            <created>2017-02-16</created>
+            <song number="1">
+                <artist>Green Day</artist>
+                <title>American Idiot</title>
+                <album>American Idiot(Deluxe)</album>
+                <lenght>245</lenght>
+                <rating>4.5</rating>
+                <released>2004-05-04</released>
+                <featuring></featuring>
+                <writers>
+                    <writer>Billy Joe Amstrong</writer>
+                    <writer>Frank E. Wright III</writer>
+                </writers>
+            </song>
+            <song number="2">
+                <artist>The Offspring</artist>
+                <title>Gone Away</title>
+                <album>Ixnay on the Hombre</album>
+                <lenght>306</lenght>
+                <rating>4.7</rating>
+                <released>1997-10-25</released>
+                <featuring>
+                    <artist>Billy Joel</artist>
+                    <artist>Michael Jackson</artist>
+                </featuring>
+                <writers>
+                    <writer>Bryan Keith Holland</writer>
+                    <writer>Greg Kriesel</writer>
+                </writers>
+            </song>
+        </playlist>
+        <playlist subgenre="alternative">
+            <name>All new Alt</name>
+            <created>2016-08-13</created>
+            <song number="1">
+                <artist>Arctic Monkeys</artist>
+                <title>Arabella</title>
+                <album>AM</album>
+                <lenght>302</lenght>
+                <rating>5.0</rating>
+                <released>2013-12-12</released>
+                <featuring></featuring>
+                <writers>
+                    <writer>Alex Turner</writer>
+                </writers>
+            </song>
+            <song number="2">
+                <artist>Imagine Dragons</artist>
+                <title>Believer</title>
+                <album>Evolve</album>
+                <lenght>403</lenght>
+                <rating>4.8</rating>
+                <released>2017-04-18</released>
+                <featuring></featuring>
+                <writers>
+                    <writer>Ben McKee</writer>
+                    <writer>Dan Reynolds</writer>
+                    <writer>Mattias Larson</writer>
+                    <writer>Wayne Sermon</writer>
+                </writers>
+            </song>
+        </playlist>
+    </library>
+    <library genre="hip-hop">
+        <playlist subgenre="undreground-rap">
+            <name>Rap Mixtape</name>
+            <created>2015-09-13</created>
+            <song number="1">
+                <artist>Eminem</artist>
+                <title>'Till I Collapse</title>
+                <album>The Eminem Show</album>
+                <lenght>345</lenght>
+                <rating>4.9</rating>
+                <released>2002-04-29</released>
+                <featuring>
+                    <artist>Nate Dogg</artist>
+                </featuring>
+                <writers>
+                    <writer>Marshall Mathers</writer>
+                    <writer>Brian May</writer>
+                </writers>
+            </song>
+            <song number="2">
+                <artist>Kendric Lamar</artist>
+                <title>DNA.</title>
+                <album>DAMH.</album>
+                <lenght>182</lenght>
+                <rating>4.2</rating>
+                <released>2017-06-30</released>
+                <featuring>
+                    <artist>Lil' Wayne</artist>
+                </featuring>
+                <writers>
+                    <writer>Kendric Lamar</writer>
+                    <writer>Michael L Williams II</writer>
+                </writers>
+            </song>
+        </playlist>
+        <playlist subgenre="gangsta-rap">
+            <name>Old Thing Back</name>
+            <created>2004-12-04</created>
+            <song number="1">
+                <artist>2Pac</artist>
+                <title>Hit 'Em Up</title>
+                <album>2Pac Live</album>
+                <lenght>312</lenght>
+                <rating>4.7</rating>
+                <released>1996</released>
+                <featuring>
+                    <artist>Outlawz</artist>
+                </featuring>
+                <writers>
+                    <writer>2Pac</writer>
+                    <writer>Dennis Lambert</writer>
+                    <writer>Franne Golde</writer>
+                </writers>
+            </song>
+            <song number="2">
+                <artist>The Notoriuos B.I.G.</artist>
+                <title>Notorious Thugs</title>
+                <album>Life After Death</album>
+                <lenght>482</lenght>
+                <rating>5.0</rating>
+                <released>1997</released>
+                <featuring>
+                    <artist>DMC</artist>
+                    <artist>Snoop Dogg</artist>
+                </featuring>
+                <writers>
+                    <writer>Andre Hendirson</writer>
+                    <writer>Steve Combs</writer>
+                </writers>
+            </song>
+        </playlist>
+    </library>
+</discography>
