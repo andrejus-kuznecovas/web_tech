@@ -95,10 +95,11 @@ output: genre : rock
     6.4. dvi aibes
 
 ## //* = //song 
-ar iš visų žymių yra tokios žymės, kurios yra //song aibėje
+lygina kaip bool
 bei mokėti paaiškinti visais atvejais atliekamus tipų konvertavimus
 
 
 7. parašyti išraišką, su operatoriais <, > lyginančią dvi aibes ir mokėti paaiškinti atliekamus automatinius tipų konvertavimus
 
 ## //rating > //lenght
+lygina number()
