@@ -1,0 +1,177 @@
+{
+  "discography": {
+    "library": [
+      {
+        "-genre": "rock",
+        "playlist": [
+          {
+            "-subgenre": "punk",
+            "name": "\"Punk rock powerhouse\"",
+            "created": "2017-02-16",
+            "song": [
+              {
+                "-number": "1",
+                "artist": "Green Day",
+                "title": "American Idiot",
+                "album": "American Idiot(Deluxe)",
+                "lenght": "245",
+                "rating": "4.5",
+                "released": "2004-05-04",
+                "writers": {
+                  "writer": [
+                    "Billy Joe Amstrong",
+                    "Frank E. Wright III"
+                  ]
+                }
+              },
+              {
+                "-number": "2",
+                "artist": "The Offspring",
+                "title": "Gone Away",
+                "album": "Ixnay on the Hombre",
+                "lenght": "306",
+                "rating": "4.7",
+                "released": "1997-10-25",
+                "featuring": {
+                  "artist": [
+                    "Billy Joel",
+                    "Michael Jackson"
+                  ]
+                },
+                "writers": {
+                  "writer": [
+                    "Bryan Keith Holland",
+                    "Greg Kriesel"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "-subgenre": "alternative",
+            "name": "All new Alt",
+            "created": "2016-08-13",
+            "song": [
+              {
+                "-number": "1",
+                "artist": "Arctic Monkeys",
+                "title": "Arabella",
+                "album": "AM",
+                "lenght": "302",
+                "rating": "5.0",
+                "released": "2013-12-12",
+                "writers": { "writer": "Alex Turner" }
+              },
+              {
+                "-number": "2",
+                "artist": "Imagine Dragons",
+                "title": "Believer",
+                "album": "Evolve",
+                "lenght": "403",
+                "rating": "4.8",
+                "released": "2017-04-18",
+                "writers": {
+                  "writer": [
+                    "Ben McKee",
+                    "Dan Reynolds",
+                    "Mattias Larson",
+                    "Wayne Sermon"
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "-genre": "hip-hop",
+        "playlist": [
+          {
+            "-subgenre": "undreground-rap",
+            "name": "Rap Mixtape",
+            "created": "2015-09-13",
+            "song": [
+              {
+                "-number": "1",
+                "artist": "Eminem",
+                "title": "'Till I Collapse",
+                "album": "The Eminem Show",
+                "lenght": "345",
+                "rating": "4.9",
+                "released": "2002-04-29",
+                "featuring": { "artist": "Nate Dogg" },
+                "writers": {
+                  "writer": [
+                    "Marshall Mathers",
+                    "Brian May"
+                  ]
+                }
+              },
+              {
+                "-number": "2",
+                "artist": "Kendric Lamar",
+                "title": "DNA.",
+                "album": "DAMH.",
+                "lenght": "182",
+                "rating": "4.2",
+                "released": "2017-06-30",
+                "featuring": { "artist": "Lil' Wayne" },
+                "writers": {
+                  "writer": [
+                    "Kendric Lamar",
+                    "Michael L Williams II"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "-subgenre": "gangsta-rap",
+            "name": "Old Thing Back",
+            "created": "2004-12-04",
+            "song": [
+              {
+                "-number": "1",
+                "artist": "2Pac",
+                "title": "Hit 'Em Up",
+                "album": "2Pac Live",
+                "lenght": "312",
+                "rating": "4.7",
+                "released": "1996",
+                "featuring": { "artist": "Outlawz" },
+                "writers": {
+                  "writer": [
+                    "2Pac",
+                    "Dennis Lambert",
+                    "Franne Golde"
+                  ]
+                }
+              },
+              {
+                "-number": "2",
+                "artist": "The Notoriuos B.I.G.",
+                "title": "Notorious Thugs",
+                "album": "Life After Death",
+                "lenght": "482",
+                "rating": "5.0",
+                "released": "1997",
+                "featuring": {
+                  "artist": [
+                    "DMC",
+                    "Snoop Dogg"
+                  ]
+                },
+                "writers": {
+                  "writer": [
+                    "Andre Hendirson",
+                    "Steve Combs"
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
