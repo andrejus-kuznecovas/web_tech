@@ -1,0 +1,38 @@
+<, <=, >, >= be aibiø reikalauja, kad abu operandai bûtø skaièiai
+
+boolean(aibe) true - netuscia
+boolean(string) true - ne tuscias
+boolean(number) true - ne 0 ir ne NaN
+
+string(aibe) imamas pirmas elementas:
+			zyme - imami tekstiniai ipediniai ir jungiami i eilute
+			atributas - reiksme kaip eilute
+			tekstas - imamas tekstas
+string(number) - i naturalu arba NaN
+string(bool) - true - "true"
+string() - self::node()
+
+number(string) - verciama i skaièius arba NaN
+number(bool) 1 / 0
+number(aibë) - number(string(aibe))
+
+jei or ir and argumentai nëra loginio tipo, 
+jie priverstinai paverèiami á loginá tipà,
+
+<, <=, >, >= su aibëmis
+Aibe > aibe - number() > number()
+aibe > number - number(aibe) >number
+aibe > string - number(aibe) > number(string)
+aibe > bool - boolean(aibe) > number(bool)
+
+= ir != be aibiø
+boolean(), jeigu bent vienas bool
+number(), jeigu bent vienas number
+abu string(), jeigu ne 
+
+Lyginimo operacijos = ir != su aibëmis
+
+aibe = aibe - string(aibe) = string(aibe)
+aibe = number - number(aibe) = number
+aibe = string - string(aibe) = string
+aibe = bool - boolean(aibe) = bool
