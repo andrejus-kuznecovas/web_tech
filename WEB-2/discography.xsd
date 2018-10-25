@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="https://spotify.com/" xmlns:p="https://spotify.com/" targetNamespace="https://spotify.com/" elementFormDefault="playlists">
+    <xs:element name="discography">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="library" type="libraryType" />
+                <xs:element name="bannedSongs" type="xs:integer" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!--1.prasmingas tipas apribojantis schema stand-->
+    <xs:simpleType name="artistNameType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="2" />
+            <xs:maxLength value="20" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--2 prasmingas listas -->
+    <xs:simpleType name="lenghtType">
+        <xs:list itemType="xs:integer" />
+    </xs:simpleType>
+
+    <!--3 sudetingi tipai su paprastu turiniu, base:-->
+    <xs:simpleType name="ratingType">
+        <xs:restriction base="xs:float">
+            <xs:minInclusive value="0.01" />
+            <xs:maxInclusive value="5" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="lenghtMeasureType">
+        <xs:simpleContent>
+            <xs:extension base="lenghtType">
+                <xs:attribute name="measure" type="xs:integer" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="lenghtMeasureStrict">
+        <xs:simpleContent>
+            <xs:restriction base="lenghtMeasureType">
+                <!-- 5 apribojimas-->
+                <xs:attribute name="measure" use="required">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                            <xs:minLength value="1" />
+                            <xs:maxLength value="4" />
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
+            </xs:restriction>
+        </xs:simpleContent>
+    </xs:complexType>
+
+		<!-- 4 sudetingi tipai su sudetingu turiniu -->
+
+		<xs:complexType name="libraryType">
+			<xs:sequence>
+				<xs:element name="playlist" type="playlistType" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+		
+		<xs:complexType name="playlistMixtapeType">
+			<xs:complexContent>
+				<xs:restriction base="playlistType">
+					<xs:sequence>
+						<xs:element name="playlist" type="playlistType" minOccurs="5" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+    <!-- 4 sudetingi tipai su sudetingu turiniu -->
+    <!--<xs:complexType name="featuringType">
+        <xs:sequence>
+            <xs:element name="artist" type="artistType" minOccurs="0" maxOccurs="unbounded" />
+            <xs:complexType name="featuringTypeEnsemble">
+                <xs:complexContent>
+                    <xs:restriction base="featuringType">
+                        <xs:sequence>
+                            <xs:element name="artist" type="zaidejasType" minOccurs="5" maxOccurs="unbounded" />
+                        </xs:sequence>
+                    </xs:restriction>
+                </xs:complexContent>
+            </xs:complexType>
+        </xs:sequence>
+    </xs:complexType>-->
+
+    		<xs:complexType name="playlistType">
+			<xs:sequence>
+				<xs:element name="name" type="xs:string"/>
+                <xs:element name="created" type="xs:date"/>
+                <xs:element name="song" type="songType"/>
+			</xs:sequence>
+		</xs:complexType>
+    		<xs:complexType name="writersType">
+			<xs:sequence>
+				<xs:element name="writer" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+
+
+    		<xs:complexType name="songType">
+			<xs:complexContent>
+				<xs:extension base="playlistType">
+					<xs:sequence minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="artist" type="artistType"/>
+                        <xs:element name="title" type="xs:string"/>
+                        <xs:element name="album" type="xs:string"/>
+						<xs:element name="lenght" type="lenghtType"/>
+						<xs:element name="rating" type="ratingType"/>
+						<xs:element name="released" type="xs:date"/>
+						<xs:element name="featuring" type="featuringType"/>
+                        <xs:element name="writers" type="writersType"/>
+                        <xs:element name="details" type="detailsType" />
+                        <xs:element name="code" type="xs:integer"/>
+					</xs:sequence>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+<!--6 mixed type-->
+		
+		<xs:complexType name="detailsType" mixed="true">
+			<xs:all>
+				<xs:element name="tempo" type="xs:integer"/>
+				<xs:element name="words" type="xs:integer"/>
+			</xs:all>
+		</xs:complexType>
+
+
+<!-- 7. choice -->
+		<xs:complexType name="featuringType">
+			<xs:sequence>
+				<xs:choice>
+					<xs:element name="artist" type="xs:string"/>
+					<xs:element name="celebrity" type="xs:string"/>
+				</xs:choice>
+				<xs:element name="treneris" type="zmogusType"/>
+				<xs:element name="zaidejai" type="zaidejasTypeFullSquad"/>
+			</xs:sequence>
+			<xs:attribute name="pavadinimas" type="xs:string"/>
+		</xs:complexType>
+<!-- 8. keyref unique key -->
+
+    <xs:unique name="uniqueCode">
+        <xs:selector xpath=".//p:discography/p:library/p:playlist/p:song" />
+        <xs:field xpath="p:code" />
+    </xs:unique>
+    <xs:keyref name="NrKeyRef" refer="code">
+        <xs:selector xpath=".//p:bannedSongs" />
+        <xs:field xpath=".//p:bannedSongs" />
+    </xs:keyref>
+
+
+</xs:schema>
