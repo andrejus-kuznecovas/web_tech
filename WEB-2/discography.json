@@ -6,7 +6,7 @@
         "playlist": [
           {
             "-subgenre": "punk",
-            "name": "\"Punk rock powerhouse\"",
+            "name": "Punk rock powerhouse",
             "created": "2017-02-16",
             "song": [
               {
@@ -14,7 +14,10 @@
                 "artist": "Green Day",
                 "title": "American Idiot",
                 "album": "American Idiot(Deluxe)",
-                "lenght": "245",
+                "lenght": {
+                  "-measure": "seconds",
+                  "#text": "245"
+                },
                 "rating": "4.5",
                 "released": "2004-05-04",
                 "writers": {
@@ -22,14 +25,22 @@
                     "Billy Joe Amstrong",
                     "Frank E. Wright III"
                   ]
-                }
+                },
+                "details": {
+                  "tempo": "45",
+                  "words": "951"
+                },
+                "code": "159753"
               },
               {
                 "-number": "2",
                 "artist": "The Offspring",
                 "title": "Gone Away",
                 "album": "Ixnay on the Hombre",
-                "lenght": "306",
+                "lenght": {
+                  "-measure": "seconds",
+                  "#text": "306"
+                },
                 "rating": "4.7",
                 "released": "1997-10-25",
                 "featuring": {
@@ -43,7 +54,12 @@
                     "Bryan Keith Holland",
                     "Greg Kriesel"
                   ]
-                }
+                },
+                "details": {
+                  "tempo": "45",
+                  "words": "951"
+                },
+                "code": "9517532"
               }
             ]
           },
@@ -57,17 +73,28 @@
                 "artist": "Arctic Monkeys",
                 "title": "Arabella",
                 "album": "AM",
-                "lenght": "302",
+                "lenght": {
+                  "-measure": "seconds",
+                  "#text": "302"
+                },
                 "rating": "5.0",
                 "released": "2013-12-12",
-                "writers": { "writer": "Alex Turner" }
+                "writers": { "writer": "Alex Turner" },
+                "details": {
+                  "tempo": "45",
+                  "words": "951"
+                },
+                "code": "852147963"
               },
               {
                 "-number": "2",
                 "artist": "Imagine Dragons",
                 "title": "Believer",
                 "album": "Evolve",
-                "lenght": "403",
+                "lenght": {
+                  "-measure": "seconds",
+                  "#text": "403"
+                },
                 "rating": "4.8",
                 "released": "2017-04-18",
                 "writers": {
@@ -77,7 +104,12 @@
                     "Mattias Larson",
                     "Wayne Sermon"
                   ]
-                }
+                },
+                "details": {
+                  "tempo": "45",
+                  "words": "951"
+                },
+                "code": "987456321"
               }
             ]
           }
@@ -96,7 +128,10 @@
                 "artist": "Eminem",
                 "title": "'Till I Collapse",
                 "album": "The Eminem Show",
-                "lenght": "345",
+                "lenght": {
+                  "-measure": "seconds",
+                  "#text": "345"
+                },
                 "rating": "4.9",
                 "released": "2002-04-29",
                 "featuring": { "artist": "Nate Dogg" },
@@ -105,14 +140,22 @@
                     "Marshall Mathers",
                     "Brian May"
                   ]
-                }
+                },
+                "details": {
+                  "tempo": "45",
+                  "words": "951"
+                },
+                "code": "78541236"
               },
               {
                 "-number": "2",
                 "artist": "Kendric Lamar",
                 "title": "DNA.",
                 "album": "DAMH.",
-                "lenght": "182",
+                "lenght": {
+                  "-measure": "seconds",
+                  "#text": "182"
+                },
                 "rating": "4.2",
                 "released": "2017-06-30",
                 "featuring": { "artist": "Lil' Wayne" },
@@ -121,7 +164,12 @@
                     "Kendric Lamar",
                     "Michael L Williams II"
                   ]
-                }
+                },
+                "details": {
+                  "tempo": "45",
+                  "words": "951"
+                },
+                "code": "85412365"
               }
             ]
           },
@@ -135,7 +183,10 @@
                 "artist": "2Pac",
                 "title": "Hit 'Em Up",
                 "album": "2Pac Live",
-                "lenght": "312",
+                "lenght": {
+                  "-measure": "seconds",
+                  "#text": "312"
+                },
                 "rating": "4.7",
                 "released": "1996",
                 "featuring": { "artist": "Outlawz" },
@@ -145,14 +196,22 @@
                     "Dennis Lambert",
                     "Franne Golde"
                   ]
-                }
+                },
+                "details": {
+                  "tempo": "45",
+                  "words": "951"
+                },
+                "code": "85471236"
               },
               {
                 "-number": "2",
                 "artist": "The Notoriuos B.I.G.",
                 "title": "Notorious Thugs",
                 "album": "Life After Death",
-                "lenght": "482",
+                "lenght": {
+                  "-measure": "seconds",
+                  "#text": "482"
+                },
                 "rating": "5.0",
                 "released": "1997",
                 "featuring": {
@@ -166,12 +225,18 @@
                     "Andre Hendirson",
                     "Steve Combs"
                   ]
-                }
+                },
+                "details": {
+                  "tempo": "45",
+                  "words": "951"
+                },
+                "code": "9856321"
               }
             ]
           }
         ]
       }
-    ]
+    ],
+    "bannedSong": "124125"
   }
 }
