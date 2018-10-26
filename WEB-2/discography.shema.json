@@ -1,0 +1,168 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "definitions": {
+        "playlist": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "pattern": "^[\\w\\s]*[\\w]$"
+                },
+                "created": {
+                    "type": "string",
+                    "pattern": "^([0-9]{4})-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$"
+                },
+                "song": {
+                    "$ref": "#/definitions/song"
+                }
+            },
+            "required": [
+                "name",
+                "created",
+                "song"
+            ],
+            "additionalProperties": false
+        },
+        "detailsObject": {
+            "type": "object",
+            "properties": {
+                "featuring": {
+                    "$ref": "#/definitions/details"
+                }
+            },
+            "required": [
+                "featuring"
+            ],
+            "additionalProperties": false
+        },
+        "library": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/playlist"
+            },
+            "additionalProperties": false
+        },
+        "song": {
+            "type": "object",
+            "properties": {
+                "artist": {
+                    "type": "string",
+                    "maxLength": 40
+                },
+                "title": {
+                    "type": "string"
+                },
+                "album": {
+                    "type": "string"
+                },
+                "lenght": {
+                    "type": "number",
+                    "minimum": 1
+                },
+                "rating": {
+                    "type": "number",
+                    "minimum": 0.1,
+                    "maximum": 5
+                },
+                "released": {
+                    "type": "string",
+                    "pattern": "^([0-9]{4})-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$"
+                },
+                "featuring": {
+                    "$ref": "#/definitions/featuring"
+                },
+                "writers": {
+                    "$ref": "#/definitions/writers"
+                },
+                "details": {
+                    "$ref": "#/definitions/details"
+                },
+                "code": {
+                    "type": "integer", "maxLength": 5
+                }
+            },
+            "required": [
+                "artist",
+                "title",
+                "album",
+                "code"
+            ],
+            "additionalProperties": false
+        },
+        "details": {
+            "allOf": [
+                {
+                    "words": {
+                        "type": "number"
+                    }
+                },
+                {
+                    "tempo": {
+                        "type": "number",
+                        "multipleOf": 2
+                    }
+                },
+                {
+                    "conposition": {
+                        "enum": [
+                            "Minor",
+                            "Major"
+                        ]
+                    }
+                }
+            ]
+        },
+        "featuring": {
+            "type": "array",
+            "items": {
+                "anyOf": [
+                    {
+                        "$ref": "#/definitions/artist"
+                    },
+                    {
+                        "$ref": "#/definitions/celebrity"
+                    }
+                ]
+            }
+        },
+        "writers": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/writer"
+            },
+            "required": [
+                "writers"
+            ],
+            "additionalProperties": false
+        },
+        "writer": {
+            "anyOf": [
+                {
+                    "$ref": "#/definitions/artist"
+                },
+                {
+                    "$ref": "#/definitions/celebrity"
+                }
+            ]
+        }
+    },
+    "type": "object",
+    "properties": {
+        "discography": {
+            "type": "object",
+            "properties": {
+                "library": {
+                    "$ref": "#/definitions/library"
+                }
+            },
+            "required": [
+                "library"
+            ],
+            "additionalProperties": false
+        }
+    },
+    "required": [
+        "discography"
+    ],
+    "additionalProperties": false
+}

@@ -16,7 +16,9 @@
                     <writer>Billy Joe Amstrong</writer>
                     <writer>Frank E. Wright III</writer>
                 </writers>
-                <details>Major
+                <details>
+                    Upbeat
+                    <composition>Major</composition>
                     <tempo>45</tempo>
                     <words>951</words>
                 </details>
@@ -37,7 +39,9 @@
                     <writer>Bryan Keith Holland</writer>
                     <writer>Greg Kriesel</writer>
                 </writers>
-                <details>Minor
+                <details>
+                    Lowbeat
+                    <composition>Major</composition>
                     <tempo>45</tempo>
                     <words>951</words>
                 </details>
@@ -58,9 +62,11 @@
                 <writers>
                     <writer>Alex Turner</writer>
                 </writers>
-                <details> Minor
+                <details>
+                    Lowbeat
                     <tempo>45</tempo>
                     <words>951</words>
+                    <composition>Major</composition>
                 </details>
                 <code>852147963</code>
             </song>
@@ -78,7 +84,9 @@
                     <writer>Mattias Larson</writer>
                     <writer>Wayne Sermon</writer>
                 </writers>
-                <details> Minor
+                <details>
+                    Mediumbeat
+                    <composition>Minor</composition>
                     <tempo>45</tempo>
                     <words>951</words>
                 </details>
@@ -104,9 +112,11 @@
                     <writer>Marshall Mathers</writer>
                     <writer>Brian May</writer>
                 </writers>
-                <details> Minor
+                <details>
+                    lowbeat
                     <tempo>45</tempo>
                     <words>951</words>
+                    <composition>Major</composition>
                 </details>
                 <code>78541236</code>
             </song>
@@ -123,10 +133,12 @@
                 <writers>
                     <writer>Kendric Lamar</writer>
                     <writer>Michael L Williams II</writer>
-                </writers>                
-                <details> Minor
+                </writers>
+                <details>
+                    upbeat
                     <tempo>45</tempo>
                     <words>951</words>
+                    <composition>Major</composition>
                 </details>
                 <code>85412365</code>
             </song>
@@ -149,9 +161,11 @@
                     <writer>Dennis Lambert</writer>
                     <writer>Franne Golde</writer>
                 </writers>
-                <details> Minor
+                <details>
+                    Mediumbeat
                     <tempo>45</tempo>
                     <words>951</words>
+                    <composition>Major</composition>
                 </details>
                 <code>85471236</code>
             </song>
@@ -170,9 +184,11 @@
                     <writer>Andre Hendirson</writer>
                     <writer>Steve Combs</writer>
                 </writers>
-                <details> Minor
+                <details>
+                    upbeat
                     <tempo>45</tempo>
                     <words>951</words>
+                    <composition>Major</composition>
                 </details>
                 <code>9856321</code>
             </song>

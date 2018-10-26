@@ -1,0 +1,196 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "definitions": {
+        "paskaitosVieta": {
+            "type": "object",
+            "properties": {
+                "gatvė": {
+                    "enum": [
+                        "Naugarduko",
+                        "Didlaukio"
+                    ]
+                },
+                "auditorija": {
+                    "type": "string",
+                    "pattern": "^\\d+[a-zA-Z]?$"
+                }
+            },
+            "required": [
+                "gatvė",
+                "auditorija"
+            ],
+            "additionalProperties": false
+        },
+        "užduotysObject": {
+            "type": "object",
+            "properties": {
+                "užduotys": {
+                    "$ref": "#/definitions/užduotys"
+                }
+            }
+        },
+        "užduotys": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/užduotis"
+            },
+            "additionalProperties": false
+        },
+        "užduotis": {
+            "type": "object",
+            "properties": {
+                "numeris": {
+                    "type": "integer",
+                    "minimum": 1
+                },
+                "deadline": {
+                    "type": "string",
+                    "pattern": "^([0-9]{4})-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$"
+                },
+                "temos": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "maxLength": 120
+                    }
+                },
+                "įvertis": {
+                    "oneOf": [
+                        {
+                            "$ref": "#/definitions/įvertis"
+                        },
+                        {
+                            "$ref": "#/definitions/įskaita"
+                        }
+                    ]
+                }
+            },
+            "required": [
+                "numeris",
+                "deadline",
+                "temos",
+                "įvertis"
+            ]
+        },
+        "teorija": {
+            "type": "object",
+            "properties": {
+                "paskaitosVieta": {
+                    "$ref": "#/definitions/paskaitosVieta"
+                }
+            },
+            "required": [
+                "paskaitosVieta"
+            ]
+        },
+        "pratybos": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/teorija"
+                },
+                {
+                    "properties": {
+                        "užduotys": {
+                            "$ref": "#/definitions/užduotys"
+                        }
+                    },
+                    "required": [
+                        "užduotys"
+                    ]
+                }
+            ]
+        },
+        "paskaitos": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "pavadinimas": {
+                        "type": "string",
+                        "pattern": "^[\\w\\s]*[\\w]$"
+                    },
+                    "teorija": {
+                        "$ref": "#/definitions/teorija"
+                    },
+                    "pratybos": {
+                        "$ref": "#/definitions/pratybos"
+                    },
+                    "šaltinis": {
+                        "$ref": "#/definitions/šaltinis"
+                    }
+                },
+                "required": [
+                    "pavadinimas",
+                    "teorija",
+                    "pratybos"
+                ],
+                "additionalProperties": false
+            }
+        },
+        "šaltinis": {
+            "anyOf": [
+                {
+                    "$ref": "#/definitions/tinkalapis"
+                },
+                {
+                    "$ref": "#/definitions/knyga"
+                }
+            ]
+        },
+        "tinkalapis": {
+            "type": "object",
+            "properties": {
+                "url": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "url"
+            ]
+        },
+        "knyga": {
+            "type": "object",
+            "properties": {
+                "autorius": {
+                    "type": "string"
+                },
+                "pavadinimas": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "autorius",
+                "pavadinimas"
+            ]
+        },
+        "įskaita": {
+            "enum": [
+                "įskaita"
+            ]
+        },
+        "įvertis": {
+            "type": "number",
+            "minimum": 0.1,
+            "multipleOf": 0.1
+        }
+    },
+    "type": "object",
+    "properties": {
+        "tvarkaraštis": {
+            "type": "object",
+            "properties": {
+                "paskaitos": {
+                    "$ref": "#/definitions/paskaitos"
+                }
+            },
+            "required": [
+                "paskaitos"
+            ],
+            "additionalProperties": false
+        }
+    },
+    "required": [
+        "tvarkaraštis"
+    ],
+    "additionalProperties": false
+}
