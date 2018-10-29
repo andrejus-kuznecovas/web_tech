@@ -41,7 +41,7 @@
                     <xs:simpleType>
                         <xs:restriction base="xs:integer">
                             <xs:minLength value="1" />
-                            <xs:maxLength value="4" />
+                            <xs:maxLength value="300" />
                         </xs:restriction>
                     </xs:simpleType>
                 </xs:attribute>
@@ -110,9 +110,9 @@
     <!--6 mixed type-->
     <xs:complexType name="detailsType" mixed="true">
         <xs:all>
-            <xs:element name="tempo" type="xs:integer" />
-            <xs:element name="words" type="xs:integer" />
-            <xs:element name="compisition" type="xs:string" />
+            <xs:element name="tempo" type="xs:integer" minOccurs="1" maxOccurs="1" />
+            <xs:element name="words" type="xs:integer" minOccurs="1" maxOccurs="1" />
+            <xs:element name="compisition" type="xs:string" minOccurs="1" maxOccurs="1" />
         </xs:all>
     </xs:complexType>
     <!-- 7. choice -->
