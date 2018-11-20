@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="https://spotify.com/" xmlns:p="https://spotify.com/" targetNamespace="https://spotify.com/" elementFormDefault="playlists">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="https://spotify.com/" xmlns:p="https://spotify.com/" targetNamespace="https://spotify.com/" elementFormDefault="qualified">
     <xs:element name="discography">
         <xs:complexType>
             <xs:sequence>
@@ -60,7 +60,7 @@
         <xs:complexContent>
             <xs:restriction base="playlistType">
                 <xs:sequence>
-                    <xs:element name="playlist" type="playlistType" minOccurs="5" maxOccurs="unbounded" />
+                    <xs:element name="song" type="songType" minOccurs="5" maxOccurs="unbounded" />
                 </xs:sequence>
             </xs:restriction>
         </xs:complexContent>
@@ -79,9 +79,9 @@
         </xs:sequence>
     </xs:complexType>
     <!--isvestas extension-->
-    <xs:complexType name="songType">
+    <xs:complexType name="FancySongType">
         <xs:complexContent>
-            <xs:extension base="playlistType">
+            <xs:extension base="songType">
                 <xs:sequence minOccurs="0" maxOccurs="unbounded">
                     <xs:element name="artist" type="artistType" />
                     <xs:element name="title" type="xs:string" />
@@ -112,7 +112,7 @@
         <xs:all>
             <xs:element name="tempo" type="xs:integer" minOccurs="1" maxOccurs="1" />
             <xs:element name="words" type="xs:integer" minOccurs="1" maxOccurs="1" />
-            <xs:element name="compisition" type="xs:string" minOccurs="1" maxOccurs="1" />
+            <xs:element name="composition" type="xs:string" minOccurs="1" maxOccurs="1" />
         </xs:all>
     </xs:complexType>
     <!-- 7. choice -->

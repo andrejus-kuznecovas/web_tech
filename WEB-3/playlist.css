@@ -1,0 +1,171 @@
+.inline {
+    display: inline;
+}
+
+.centered {
+    margin: auto;
+}
+
+.after_header{
+    margin-top: 90px;
+ }
+
+ .margin-b10{
+     margin-bottom: 10px;
+ }
+ 
+.innerPage {
+    max-width: 1024px;
+}
+
+h2{
+    color: #0e11a3
+}
+
+input[required]{
+    background-color: yellow;
+}
+header {
+    position: fixed;
+    top: 0;
+    display: block;
+    background-color: #efac5f;
+    left: 0;
+    right: 0;
+}
+article{
+    color:black;
+}
+
+p{
+    color:palevioletred;
+}
+
+article p {
+    color:black;
+}
+
+
+body {
+    width: 1024px;
+    margin: auto;
+}
+
+img[title="SPOTIFY"] {
+    height: 60px;
+    position: relative;
+    top: 10px;
+}
+
+
+.green {
+    background-color: green;
+}
+
+.orange {
+    background-color: orange;
+}
+.green.orange {
+    background-color: #bfd900;
+}
+p a {
+    text-decoration: inherit;
+}
+
+nav {
+    float: right;
+}
+
+nav > a  {
+    color: black;
+    background-color: azure;
+    border: 2px rgb(1, 13, 121) solid;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    top: 15px;
+    width: 170px;
+    text-align: center;
+    margin: 0px 10px;
+    
+}
+
+body {
+    background-color: #68d681;
+}
+
+ul li {
+    color: black !important;
+}
+
+ul>li{
+    color:red;
+}
+
+table {
+    width: 100%;
+    border: 4px;
+    
+}
+
+td, th {
+    background-color: rgb(255, 255, 109);
+    padding: 15px;
+    text-align: left;
+    border-color: rgb(10, 10, 0);
+    border-width: 3px;
+    border-style: solid;
+}
+
+th {
+    background: rgb(193, 193, 48);
+    border-color:  rgb(10, 10, 0);
+    border-width: 3px;
+    border-style: solid;
+}
+
+aside {
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+footer {
+    text-align: center;
+    background-color: #a293ac;
+    padding: 10px;
+    margin: 0;
+}
+
+#name {
+    border-color: rgb(188, 26, 26);
+    border-width: 3px;
+    border-style: solid;
+}
+
+@media screen and (max-width: 800px) {
+    header {
+        margin: auto;
+    }
+
+    nav {
+        float: none; 
+        display: block !important; 
+    }
+
+    nav > a {
+        width: 30%;
+        margin: 0 2%;
+        padding: 5px 2%;
+
+        top: 5px;
+    }
+}
+@media screen and (max-width: 400px) {
+    nav > a {
+        width: 95%;
+        margin: 0;
+        padding: 10px 5%;
+        top: 5px;
+    }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add new song</title>
+    <link rel="stylesheet" href="playlist.css" type="text/css">
+</head>
+
+<body>
+    <header>
+        <div class="innerPage centered margin-b10 ">
+            <img src="spotify.png" alt="SPOTIFY" title="SPOTIFY">
+            <h1 class="inline">Spotify Playlists</h1>
+            <nav class="inline">
+                <a href="playlist.html">Spotify Playlists </a>
+                <a href="newsong.html">Add New Song</a>
+            </nav>
+        </div>
+    </header>
+    <div class="after_header innerPage">
+        <section>
+            <h2>Add new song</h2>
+            Required fields:
+            <ul>
+                <li>Song Name</li>
+                <li>Release Year</li>
+            </ul>
+
+            <form name="form" action="playlist.html" method="post">
+                Song Name:
+                <input type="text" name="song_name" placeholder="Song Name" required>
+                <br>Rating:
+                <input type="number" name="song_rating" placeholder="Rating" min="0" max="5" step="0.1">
+                <br> Release Year:
+                <input type="date" name="release_date" required>
+                <br> Tempo:
+                <div></div>
+                <label>
+                    <input type="radio" name="tempo" value="Major"> Major
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="tempo" value="Minor"> Minor
+                </label>
+                <br> Lenght:
+                <input type="number" name="lenght" min="10">
+                <br> Replace a song:
+                <br>
+                <select multiple size="5" name="replacement">
+                    <option selected value="hey_jude">Hey Jude</option>
+                    <option value="around_the_world">Around the World</option>
+                    <option value="stan">Stan</option>
+                    <option value="aobtd">Another One Bites The Dust</option>
+                    <option value="none">None</option>
+                </select>
+                <br> Color in the table:
+                <input type="color" name="tabcolor">
+                <br>
+                <input type="checkbox" value="share">Share this song on Facebook<br>
+                <br>
+                <input type="submit" value="Save">
+                <input type="reset" value="Clear">
+
+            </form>
+        </section>
+    </div>
+    <footer>
+        Lithuania © 2018 Spotify AB
+    </footer>
+</body>
+
+
+</html>
