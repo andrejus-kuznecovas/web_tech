@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>4 laboratorinio darbo atsiskaitymas</title>
+    <link rel="stylesheet" href="styling.css" type="text/css">
+</head>
+
+<body>
+    <main class="innerPage">
+        <section>
+            <h2>Vertinimas</h2>
+            <table id="cal">
+                <tr>
+                    <th>P.</th>
+                    <th>A.</th>
+                    <th>T.</th>
+                    <th>K.</th>
+                    <th>P.</th>
+                    <th>Š.</th>
+                    <th>S.</th>
+                </tr>
+            </table>
+        </section>
+        <div>
+            <section>
+                <h2>Įvedimo forma</h2>
+                <form name="form" action="javascript:void(0);">
+                    <label> Pavadinimas:</label>
+                    <input id="pavadinimas" type="text" name="pavadinimas" oninput="validateNotEmpty(this)">
+                    <span id="pavadinimasError" class="error">Laukas privalomas</span>
+                    <br> <label >Data: (YYYY-MM-DD)</label>
+                    <input id="data" type="text" name="data" oninput="validateDate(this)">
+                    <span id="dataError" class="error" >Nevalidi data</span>
+                    <br><label> Įvertinimas </label>
+                    <input id="ivertinimas" type="text" name="įvertinimas" oninput="validatePositiveInt(this)">
+                    <span id="ivertinimasError" class="error">Vertinimas turi būti teigiamas skaičius</span>
+                    <br>
+                    <button id="saveNewButton" onclick="save()">Išsaugoti naują</button>
+                    <button id="saveEditButton" class="invisible" onclick="saveEdit()">Išsaugoti pakeitimus</button>
+                    <button id="deleteButton"  class="invisible" onclick="deleteNode()">Ištrinti</button>
+                </form>
+
+                <ul id="list">
+                </ul>
+            <label>Uri:</label>
+            <input id="saveUri" type="text" oninput="updateUri(value)">
+            <br>
+            <label>Dabartinis uri:</label>
+            <span id="uri">Nėra</span>
+            <br>
+            <br>
+            <button onclick="initialize()">Save</button>
+            <button onclick="serialize()">Update</button>
+            <button onclick="deserialize()">Load</button>
+            <span id="status"/>
+            </section>
+        </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
