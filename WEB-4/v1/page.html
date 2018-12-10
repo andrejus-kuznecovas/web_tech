@@ -10,7 +10,11 @@
 <body>
     <main class="innerPage">
         <section>
-            <h2>Vertinimas</h2>
+            <span>Šiuo metu yra užregistruotas darbų skaičius:
+                <span id="darbuKiekis">0</span></span>
+        </section>
+        <section>
+            <h2>Mėnuo</h2>
             <table id="cal">
                 <tr>
                     <th>P.</th>
@@ -30,31 +34,31 @@
                     <label> Pavadinimas:</label>
                     <input id="pavadinimas" type="text" name="pavadinimas" oninput="validateNotEmpty(this)">
                     <span id="pavadinimasError" class="error">Laukas privalomas</span>
-                    <br> <label >Data: (YYYY-MM-DD)</label>
+                    <br> <label>Data: (YYYY-MM-DD)</label>
                     <input id="data" type="text" name="data" oninput="validateDate(this)">
-                    <span id="dataError" class="error" >Nevalidi data</span>
+                    <span id="dataError" class="error">Nevalidi data</span>
                     <br><label> Įvertinimas </label>
                     <input id="ivertinimas" type="text" name="įvertinimas" oninput="validatePositiveInt(this)">
-                    <span id="ivertinimasError" class="error">Vertinimas turi būti teigiamas skaičius</span>
+                    <span id="ivertinimasError" class="error">Vertinimas turi būti teigiamas natūralusis skaičius</span>
                     <br>
                     <button id="saveNewButton" onclick="save()">Išsaugoti naują</button>
                     <button id="saveEditButton" class="invisible" onclick="saveEdit()">Išsaugoti pakeitimus</button>
-                    <button id="deleteButton"  class="invisible" onclick="deleteNode()">Ištrinti</button>
+                    <button id="deleteButton" class="invisible" onclick="deleteNode()">Ištrinti</button>
                 </form>
 
                 <ul id="list">
                 </ul>
-            <label>Uri:</label>
-            <input id="saveUri" type="text" oninput="updateUri(value)">
-            <br>
-            <label>Dabartinis uri:</label>
-            <span id="uri">Nėra</span>
-            <br>
-            <br>
-            <button onclick="initialize()">Save</button>
-            <button onclick="serialize()">Update</button>
-            <button onclick="deserialize()">Load</button>
-            <span id="status"/>
+                <label>Uri:</label>
+                <input id="saveUri" type="text" oninput="updateUri(value)">
+                <br>
+                <label>Dabartinis uri:</label>
+                <span id="uri">Nėra</span>
+                <br>
+                <br>
+                <button onclick="initialize()">Save</button>
+                <button onclick="serialize()">Update</button>
+                <button onclick="deserialize()">Load</button>
+                <span id="status" />
             </section>
         </div>
     </main>

@@ -1,0 +1,27 @@
+main {
+  max-width: 1024px;
+  margin: auto;
+}
+
+.error {
+  color: red;
+  display: none;
+}
+
+label{
+  display: inline-block;
+  width: 180px;
+  text-align: left;
+}
+span{
+   margin:2px
+}
+
+input{
+  border: 2px solid black;
+  margin-top: 5px;
+}
+
+body {
+  background-color: #dce2fd;
+}

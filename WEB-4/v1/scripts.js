@@ -15,7 +15,7 @@ function createCalendar(monthDate) {
     startingWeekDay = startingWeekDay -1;
     var row;
     var monthDays = daysInMonth(monthDate);
-    for (let i=0,j=1; i < monthDays+startingWeekDay; i++)  { // Week start fix 
+    for (let i=0,j=1; i < monthDays+startingWeekDay; i++)  {
         if (i % 7 === 0) {
             row = $("<tr/>");
         }
@@ -39,8 +39,8 @@ function addEvent(idVar,nameVar, dateVar, numberVar){
 
 function findEventById(id){
     id = id.replace(listItemName,"");
-    console.log(id);
-    console.log(events);
+    //console.log(id);
+   // console.log(events);
     return events.find(event => event.id == id);
 }
 
@@ -89,7 +89,7 @@ function addEventStyle(element, event){
 function redrawDate(date){
     jsDate = parseDate(date);
     if (jsDate.getMonth() !== calendarDate.getMonth() || jsDate.getYear() !== calendarDate.getYear()){
-        console.log("no");
+       // console.log("no");
         return;
     }
     let td = $("#td" + jsDate.getDate());
@@ -121,6 +121,7 @@ function validateNotEmpty(inputElement) {
         showError(inputElement.id);
         return;
     }
+    $("#pavadinimas").css('border', '2px solid green')
     hideError(inputElement.id);
     
 }
@@ -131,6 +132,7 @@ function checkIfEmpty(input){
 function validatePositiveInt(inputElement) {
     if (checkIfIntIsPositive(inputElement.value)){
         hideError(inputElement.id);
+        $("#ivertinimas").css('border', '2px solid green')
         return;
     }
     showError(inputElement.id);
@@ -164,6 +166,7 @@ function checkIfDateIsValid (input) {
     if (newdate.getDate() != day) {
         return false;
     }
+    $("#data").css('border', '2px solid green')
     return true;
 } 
 
@@ -191,6 +194,11 @@ function save() {
     }
     addEvent(idCounter,name, date, assessment);
     appendList(name, date, assessment);
+    $("#darbuKiekis").value;
+    var text = $("#darbuKiekis").text();
+    var count = parseInt(text);
+    count++;
+    $("#darbuKiekis").text(count);
     idCounter++;
     redrawDate(date);
 }
@@ -228,6 +236,11 @@ function deleteNode(){
         return;
     }
     $("#"+editId).remove();
+    $("#darbuKiekis").value;
+    var text = $("#darbuKiekis").text();
+    var count = parseInt(text);
+    count=count-1;
+    $("#darbuKiekis").text(count);
     changeEditMode(false);
     removeEvent(editId);
 }
@@ -331,7 +344,7 @@ function deserialize(){
     $("#status").text("");
     $.get(saveUri, function (data, textStatus, jqXHR) {
         $("#status").text(textStatus);
-        if (textStatus === "success") {
+        if (textStatus === "Success!") {
             events = data;
             clearCalendar();
             idCounter = 0;
