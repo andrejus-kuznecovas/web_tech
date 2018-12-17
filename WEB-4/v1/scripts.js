@@ -344,7 +344,7 @@ function deserialize(){
     $("#status").text("");
     $.get(saveUri, function (data, textStatus, jqXHR) {
         $("#status").text(textStatus);
-        if (textStatus === "Success!") {
+        if (textStatus === "success") {
             events = data;
             clearCalendar();
             idCounter = 0;
