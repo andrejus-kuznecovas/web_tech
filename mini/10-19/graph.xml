@@ -1,0 +1,19 @@
+<graph>
+  <nodes>
+    <node name="A"/>
+    <node name="B"/>
+    <node name="C"/>
+  </nodes>
+  <vertices>
+    <vertex>
+      <from>A</from>
+      <to>B</to>
+      <weight>3</weight>
+    </vertex>
+    <vertex>
+      <from>B</from>
+      <to>C</to>
+      <weight>4</weight>
+    </vertex>
+  </vertices>
+</graph>

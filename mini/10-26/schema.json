@@ -1,0 +1,69 @@
+{
+
+	 "$schema": "http://json-schema.org/draft-04/schema#",
+
+	"definitions": {
+		"relations": {
+        	"type":"array",
+            "items": {
+            	"type":"object",
+                  "properties":{
+                	"To": {"$ref":"#/definitions/ID"},
+                	"relation_type":  
+                    {"type": "string", "enum": ["child","sibling","parent","spouse"]}
+                  }
+            }
+                
+
+        },
+      
+		"ID":       { "type": "string", "minLenght": 11, "maxLenght": 11, pattern: "^[3-6][0-9]{10}$"},
+	
+		"person": {
+			"type": "object",
+			"properties": {
+				"ID":  		{ "$ref":"#/definitions/ID"},
+				"name": 	{ "type": "string"},
+				"surname": 	{ "type": "string"},
+				"age": 		{ "type": "number", "minimum": 0},
+              	"relations": { "$ref":"#/definitions/relations"}
+				}
+			,
+			"required": ["ID", "name","surname","relations"],
+			},
+		"adult": {
+			"allOf": [
+              {"$ref":"#/definitions/person"},
+              {"properties": {
+				"works_at": {"type": "string"}
+				}
+              }
+			],
+		},
+		"child": {
+			"allOf":[
+              {"$ref":"#/definitions/person"},
+              {"properties": {
+				"school": {"type": "string"}
+				}
+               
+              }
+               
+              
+              ]
+		}
+	},
+	"type": "object",
+	"properties": {
+	"family": { 
+		"type": "array",
+		"items": {
+			"oneOf": [
+              {"$ref":"#/definitions/adult",
+				"$ref":"#/definitions/child"}
+			]
+			}
+		}
+      
+	}
+}

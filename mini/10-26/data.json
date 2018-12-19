@@ -1,0 +1,22 @@
+{
+	"family": [
+	{
+	"ID"		:"39001011111",
+	"name"		:"Jonas",
+	"surname"	:"Jonaitis",
+	"age"		:27,
+	"works_at" :"Lietuvos paštas",
+    "relations": [ {"to":				"38001011111",
+                    "relation_type":	"child"}
+    ]
+    },
+	{
+	"ID"		:"38001011111",
+	"name"		:"Petras",
+	"surname"	:"Jonaitis",
+	"age"		:17,
+	"school"	:"Žemaitės gimnazija",
+       "relations": []
+	}
+	]
+}

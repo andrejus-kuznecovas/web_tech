@@ -1,0 +1,45 @@
+{
+	"šeimosAsmenys":
+	[
+		{ 
+			"vardas": "Tadas",
+			"veikla": [ 
+					{
+					"pobūdis": "Architektas"
+					}
+				],
+			"šeimosStatusas" : "Tėvas",
+			"gyvenamojiVieta": "Kaunas"
+		},
+		{ 
+			"vardas": "Regina",
+			"veikla": [
+					{
+					"pobūdis": "Mokytojas"
+					}
+				],
+			"šeimosStatusas": "Mama",
+			"gyvenamojiVieta": "Kaunas" 
+		},
+		{ 
+			"vardas": "Gintarė",
+			"veikla": [
+					{
+					"pobūdis": "studentas",
+					"vieta": "Vilnius"
+					}
+				],
+			"šeimosStatusas": "Dukra" 
+		},
+		{ 
+			"vardas": "Remigijus",
+			"veikla": [
+					{
+					"pobūdis": "Panevežio teatro aktorius",
+					"vieta": "Panevežys"
+					}
+				],
+			"šeimosStatusas": "Sūnus"
+		}
+	]
+}

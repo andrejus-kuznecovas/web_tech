@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graph>
+  <nodes>
+    <node name="A" />
+    <node name="B" />
+    <node name="C" />
+    <node name="D" />
+    <node name="E" />
+  </nodes>
+  <edges>
+    <egde>
+      <from>A</from>
+      <to>B</to>
+    </egde>
+    <edge>
+      <from>A</from>
+      <to>D</to>
+    </edge>
+    <edge>
+      <from>B</from>
+      <to>E</to>
+    </edge>
+    <edge>
+      <from>B</from>
+      <to>C</to>
+    </edge>
+    <edge>
+      <from>D</from>
+      <to>C</to>
+    </edge>
+    <edge>
+      <from>D</from>
+      <to>E</to>
+    </edge>
+  </edges>
+</graph>
